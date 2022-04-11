@@ -197,14 +197,6 @@ function toggleVisGUI()
 	}
 }
 
-window.addEventListener('keydown', function(e)
-{
-	if (e.key == "e")
-	{
-		toggleVisGUI();
-	}
-});
-
 function startDebugger(name)
 {
 	let debui = document.getElementById("deb")
@@ -381,6 +373,12 @@ function addListeners()
 	open.addEventListener('click', openboxes);
 	sell.addEventListener('click', selldupes);
 	correct.addEventListener('click', allcorrect);
+	window.addEventListener('keydown', function(e) {
+		if (e.key == "e")
+		{
+			toggleVisGUI();
+		}
+	});
 }
 
 function CheckGame()
