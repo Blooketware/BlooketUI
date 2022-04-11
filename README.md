@@ -20,7 +20,7 @@
 
 ### What's BlooketUI?
 
-A Script that implements a GUI to make cheating on Blooket easier than ever.
+A script that implements a GUI to make cheating on Blooket easier than ever.
 
 ### How do i Use This?
 
