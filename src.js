@@ -7,7 +7,10 @@ function start()
 function loadGUI()
 {
 	let frame = document.createElement("iframe");
+	frame.id = "blooo"
 	frame.style.display = "none";
+	frame.style.width = "1px";
+	frame.style.height = "1px"
 	document.body.appendChild(frame);
 
 	window.alertf = (...content) => {
@@ -150,9 +153,9 @@ function allcorrect(event)
 	try
 	{
 		let hack = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
-		hack.stateNode.questions[0].answers = ['gg', 'ez']
-		hack.stateNode.questions[0].correctAnswers = ['gg', 'ez']
-		hack.stateNode.questions[0].text = "gg"
+		var answerf = hack.stateNode.state.question.answers
+		hack.stateNode.state.question.correctAnswers = answerf
+		hack.stateNode.state.question.text = "ggez blooketware ftw!"
 	}
 	catch (hack)
 	{
@@ -165,8 +168,24 @@ function allcorrect(event)
 
 function guiexit(event)
 {
-	const GUI = document.getElementById("GUI")
+	const GUI = document.getElementById("GUI");
+	const GUIX = document.getElementById("guiX");
+	const IFR = document.getElementById("blooo");
+	const tokens = document.getElementById("token");
+	const spoof = document.getElementById("spoof");
+	const open = document.getElementById("open");
+	const sell = document.getElementById("sell");
+	const correct = document.getElementById("correct");
+	GUIX.removeEventListener('click', guiexit);
+	tokens.removeEventListener('click', addtokens);
+	spoof.removeEventListener('click', spoofblooks);
+	open.removeEventListener('click', openboxes);
+	sell.removeEventListener('click', selldupes);
+	correct.removeEventListener('click', allcorrect);
+	window.onkeydown = null;
 	GUI.remove();
+	GUIX.remove();
+	IFR.remove();
 }
 
 function toggleVisGUI()
@@ -181,13 +200,14 @@ function toggleVisGUI()
 		GUI.style.display = "none";
 	}
 }
+
 window.addEventListener('keydown', function(e)
 {
 	if (e.key == "e")
 	{
 		toggleVisGUI();
 	}
-}, false);
+});
 
 function startDebugger(name)
 {
@@ -412,13 +432,13 @@ function CheckGame()
             case "/tower/map":
                 type = "doom"
 		mode = "Tower of Doom"
-		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
+		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button><button id="infhlt" class="hack">Infinite Health</button></div><br>'
 		loadgame(type, html, mode)
         break;
             case "/tower/battle":
                 type = "doom"
 		mode = "Tower of Doom"
-		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
+		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button><button id="infhlt" class="hack">Infinite Health</button></div><br>'
 		loadgame(type, html, mode)
                 break;
             case "/defense":
@@ -759,12 +779,14 @@ function CheckGame()
 				const lowstats = document.getElementById("lowstats")
 				const settokens = document.getElementById("settokens")
 				const maxstats = document.getElementById("maxstats")
+				const infhlt = document.getElementById("infhlt")
 				settokens.addEventListener('click', () =>
 				{
-					let coinhtml = document.querySelector(".styles__playerEnergy___G4cGN-camelCase")
+					let coinhtml = document.querySelector(".styles__playerEnergy___G4cGN-camelCase")[0].stateNode
 					let coin = hack.stateNode.state.coins;
 					coin = window.promptf("How many coins would you like?")
 					coinhtml.innerText = coin;
+					window.alertf("Set coins to " + coin)
 				})
 				maxstats.addEventListener('click', () =>
 				{
@@ -779,6 +801,7 @@ function CheckGame()
 					nums[0].innerText = hack.stateNode.state.myCard.strength;
 					nums[1].innerText = hack.stateNode.state.myCard.charisma;
 					nums[2].innerText = hack.stateNode.state.myCard.wisdom;
+					window.alertf("Set enemy stats to 0")
 				})
 				lowstats.addEventListener('click', () =>
 				{
@@ -787,6 +810,11 @@ function CheckGame()
 					hack.stateNode.state.enemyCard.wisdom = 0;
 					window.alertf("Set enemy stats to 0")
 				})
+				infhlt.addEventListener('click', () =>
+				{
+					hack.stateNode.state.myLife = 69420
+					window.alertf("Set Health to 69420")
+				})				
 				break;
 			case "factory":
 				const mega = document.getElementById("mega")
