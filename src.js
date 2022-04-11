@@ -6,19 +6,15 @@ function start()
 
 function loadGUI()
 {
-	let frame = document.createElement("iframe");
+	var frame = document.createElement("iframe");
 	frame.id = "blooo"
 	frame.style.display = "none";
 	frame.style.width = "1px";
 	frame.style.height = "1px"
 	document.body.appendChild(frame);
 
-	window.alertf = (...content) => {
-		frame.contentWindow.alert(...content);
-	};
-	window.promptf = (...content) => {
-		frame.contentWindow.prompt(...content);
-	};
+	window.alertf = frame.contentWindow.alert;
+	window.promptf = frame.contentWindow.prompt;
 
 
 	let element = document.createElement('div');
@@ -498,18 +494,25 @@ function CheckGame()
 				const towersany = document.getElementById("towersany")
 				settokenss.addEventListener('click', () =>
 				{
-					var tokenz = window.parseInt(window.promptf("How many tokens would you like?"));
-					hack.stateNode.state.tokens = tokenz
+					var tokenz = window.promptf("How many tokens would you like?");
+					if (tokenz != null || tokenz != undefined || tokenz !=  NaN){
+						hack.stateNode.state.tokens = tokenz 
+					}
+
 				})
 				sethealth.addEventListener('click', () =>
 				{
-					var hltt  = window.parseInt(window.promptf("How much health would you like?"));
-					hack.stateNode.state.health = hltt
+					var hltt  = window.promptf("How much health would you like?");
+					if (hltt != null || hltt != undefined || hltt !=  NaN){ 
+						hack.stateNode.state.health = hltt 
+					}
 				})
 				setround.addEventListener('click', () =>
 				{
-					var rnd = window.parseInt(window.promptf("What round would you like to be on?"));
-					hack.stateNode.state.round = rnd
+					var rnd = window.promptf("What round would you like to be on?");
+					if (rnd != null || rnd != undefined || rnd !=  NaN){ 
+						hack.stateNode.state.round = rnd 
+					}
 				})
 				maxtowers.addEventListener('click', () =>
 				{
