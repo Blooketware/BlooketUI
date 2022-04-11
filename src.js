@@ -13,6 +13,10 @@ function loadGUI()
 	window.alertf = (...content) => {
 		frame.contentWindow.alert(...content);
 	};
+	window.promptf = (...content) => {
+		frame.contentWindow.prompt(...content);
+	};
+
 
 	let element = document.createElement('div');
 	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">BlooketUI <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Hacks by <a href="https://github.com/Blooketware">Blooketware</a><br><a href="https://github.com/Blooketware/BlooketUI/">Repository</a></div></div>`;
@@ -454,13 +458,13 @@ function CheckGame()
 				const esp2 = document.getElementById("esp")
 				set.addEventListener('click', () =>
 				{
-					let cf = prompt("How much Crypto would you like?")
+					let cf = window.promptf("How much Crypto would you like?")
 					let num = Number(cf)
 					hack.stateNode.state.crypto = num;
 				})
 				esp2.addEventListener('click', () =>
 				{
-					let pass = prompt("What would you like your password to be?")
+					let pass = window.promptf("What would you like your password to be?")
 					hack.stateNode.state.passwordOptions[0] = pass;
 					hack.stateNode.state.password = pass;
 					window.alertf(`Set password to: ${pass}`)
@@ -474,15 +478,15 @@ function CheckGame()
 				const towersany = document.getElementById("towersany")
 				settokenss.addEventListener('click', () =>
 				{
-					hack.stateNode.state.tokens = prompt("How many tokens would you like?");
+					hack.stateNode.state.tokens = window.promptf("How many tokens would you like?");
 				})
 				sethealth.addEventListener('click', () =>
 				{
-					hack.stateNode.state.health = prompt("How much health would you like?")
+					hack.stateNode.state.health = window.promptf("How much health would you like?")
 				})
 				setround.addEventListener('click', () =>
 				{
-					hack.stateNode.state.round = prompt("What round would you like to be on?")
+					hack.stateNode.state.round = window.promptf("What round would you like to be on?")
 				})
 				maxtowers.addEventListener('click', () =>
 				{
@@ -684,19 +688,19 @@ function CheckGame()
 				})
 				setgold.addEventListener('click', () =>
 				{
-					hack.stateNode.state.gold = prompt("How much gold would you like?")
+					hack.stateNode.state.gold = window.promptf("How much gold would you like?")
 				})
 				sethappy.addEventListener('click', () =>
 				{
-					hack.stateNode.state.happiness = prompt("How much happiness would you like?")
+					hack.stateNode.state.happiness = window.promptf("How much happiness would you like?")
 				})
 				setmaterials.addEventListener('click', () =>
 				{
-					hack.stateNode.state.materials = prompt("How many materials would you like?")
+					hack.stateNode.state.materials = window.promptf("How many materials would you like?")
 				})
 				setpeople.addEventListener('click', () =>
 				{
-					hack.stateNode.state.people = prompt("How many people would you like?")
+					hack.stateNode.state.people = window.promptf("How many people would you like?")
 				})
 				max.addEventListener('click', () =>
 				{
@@ -759,7 +763,7 @@ function CheckGame()
 				{
 					let coinhtml = document.querySelector(".styles__playerEnergy___2x0Fv-camelCase")
 					let coin = hack.stateNode.state.coins;
-					coin = prompt("How many coins would you like?")
+					coin = window.promptf("How many coins would you like?")
 					coinhtml.innerText = coin;
 				})
 				maxstats.addEventListener('click', () =>
@@ -914,7 +918,7 @@ function CheckGame()
 				})
 				setcash.addEventListener('click', () =>
 				{
-					hack.stateNode.state.cash = prompt("How much cash would you like?")
+					hack.stateNode.state.cash = window.promptf("How much cash would you like?")
 				})
 				ng.addEventListener('click', () =>
 				{
@@ -940,11 +944,11 @@ function CheckGame()
 				})
 				setweight.addEventListener('click', () =>
 				{
-					hack.stateNode.state.weight = prompt("How much weight would you like?")
+					hack.stateNode.state.weight = window.promptf("How much weight would you like?")
 				})
 				setlure.addEventListener('click', () =>
 				{
-					hack.stateNode.state.lure = prompt("How much lure would you like (0-4)")
+					hack.stateNode.state.lure = window.promptf("How much lure would you like (0-4)")
 				})
 				break;
 			case "gold":
@@ -952,7 +956,7 @@ function CheckGame()
 				const choiceesp = document.getElementById("choiceesp")
 				setgoldg.addEventListener('click', () =>
 				{
-					hack.stateNode.state.gold = prompt("How much gold would you like?")
+					hack.stateNode.state.gold = window.promptf("How much gold would you like?")
 				})
 				choiceesp.addEventListener('click', () =>
 				{
