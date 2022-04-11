@@ -931,7 +931,7 @@ function CheckGame()
 					hack.stateNode.state.glitch = ""
 					hack.stateNode.state.glitchMsg = ""
 					hack.stateNode.state.glitcherBlook = ""
-//					alert("Attempted to remove glitches\n(Im to lazy to test if it works, so it it doesnt work\nopen a issue on github)")
+					window.alertf("Attempted to remove glitches.")
 				})
 				break;
 			case "fishing":
