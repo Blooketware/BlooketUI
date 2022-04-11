@@ -498,15 +498,18 @@ function CheckGame()
 				const towersany = document.getElementById("towersany")
 				settokenss.addEventListener('click', () =>
 				{
-					hack.stateNode.state.tokens = window.promptf("How many tokens would you like?");
+					var tokenz = window.parseInt(window.promptf("How many tokens would you like?"));
+					hack.stateNode.state.tokens = tokenz
 				})
 				sethealth.addEventListener('click', () =>
 				{
-					hack.stateNode.state.health = window.promptf("How much health would you like?")
+					var hltt  = window.parseInt(window.promptf("How much health would you like?"));
+					hack.stateNode.state.health = hltt
 				})
 				setround.addEventListener('click', () =>
 				{
-					hack.stateNode.state.round = window.promptf("What round would you like to be on?")
+					var rnd = window.parseInt(window.promptf("What round would you like to be on?"));
+					hack.stateNode.state.round = rnd
 				})
 				maxtowers.addEventListener('click', () =>
 				{
