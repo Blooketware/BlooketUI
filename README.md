@@ -14,7 +14,7 @@
       <img src="https://img.shields.io/badge/status-works-brightgreen">
   </a>
   <a href="https://opensource.org/">
-      <img src="https://img.shields.io/badge/Open%20Source-true-brightgreen">
+      <img src="https://img.shields.io/badge/Open%20Source-true-blue">
   </a>
 </p>
 
