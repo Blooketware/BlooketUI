@@ -368,12 +368,14 @@ async function handleData(type)
 function addListeners()
 {
 	const GUIX = document.getElementById("guiX")
+	const GUIM = document.getElementById("gui-")
 	const tokens = document.getElementById("token")
 	const spoof = document.getElementById("spoof")
 	const open = document.getElementById("open")
 	const sell = document.getElementById("sell")
 	const correct = document.getElementById("correct")
 	GUIX.addEventListener('click', guiexit);
+	GUIM.addEventListener('click', toggleVisGUI);
 	tokens.addEventListener('click', addtokens);
 	spoof.addEventListener('click', spoofblooks);
 	open.addEventListener('click', openboxes);
@@ -827,7 +829,7 @@ function CheckGame()
 					nums[0].innerText = hack.stateNode.state.myCard.strength;
 					nums[1].innerText = hack.stateNode.state.myCard.charisma;
 					nums[2].innerText = hack.stateNode.state.myCard.wisdom;
-					window.alertf("Set enemy stats to 0")
+					window.alertf("Set max stats.")
 				})
 				lowstats.addEventListener('click', () =>
 				{
