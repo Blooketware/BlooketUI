@@ -66,16 +66,36 @@ async function debuggerHelp(how)
 	});
 	const data = await response.json();
 	let name = data.name;
+	window.blooketname = name;
 	startDebugger(name);
 }
 
 function addtokens(event)
 {
 	try
-	{
-		let hack = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
-		var x = document.getElementsByTagName("P")[0].parentElement;
-		x.remove()
+	{		
+		async function addCurrencies() {		
+			const response = await fetch('https://api.blooket.com/api/users/add-rewards', {
+				method: "PUT",
+				headers: {
+					"referer": "https://www.blooket.com/",
+					"X-Blooket-Build": "b89219d3-af3b-424a-a0fb-0c7adf025c83",
+				},
+				credentials: "include",
+				body: JSON.stringify({
+					addedTokens: 250,
+					addedXp: 300,
+					name: window.blooketname
+				})
+// must be encrypted with a secret, eg: uPqAigN9YEIdXE/lqgIhaWaFiQePbqQ4VcUjc61OBwsnOSU+QFO2uvoHLSFQUmFaCF2VfjYQAqr9T2yAm8e7q3ITkUPMIvl4JtQ=
+			});
+			if (response.status == 200) {
+				alert(`500 tokens and 300 XP added to your account!`);
+			} else {
+				alert('An error occured.');
+			};
+		};
+		addCurrencies();
 	}
 	catch (hack)
 	{
