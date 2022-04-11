@@ -5,9 +5,17 @@ function start()
 }
 
 function loadGUI()
-{ //credits to gliz
+{
+	let frame = document.createElement("iframe");
+	frame.style.display = "none";
+	document.body.appendChild(frame);
+
+	window.alertf = (...content) => {
+		frame.contentWindow.alert(...content);
+	};
+
 	let element = document.createElement('div');
-	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Blooket Hacks <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Hacks by <a href="https://github.com/Blooketware">Blooketware</a><br><a href="https://github.com/Blooketware/BlooketUI/">Repository</a></div></div>`;
+	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">BlooketUI <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Hacks by <a href="https://github.com/Blooketware">Blooketware</a><br><a href="https://github.com/Blooketware/BlooketUI/">Repository</a></div></div>`;
 	element.style = `width: 350px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 	document.body.appendChild(element);
 	var pos1 = 0,
@@ -83,11 +91,11 @@ function spoofblooks(event)
 			let hack = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
 			hack.stateNode.state.lockedBlooks = [];
 			hack.stateNode.state.takenBlooks = [];
-			alert("Select a different Blook to unlock all Blooks!")
+			window.alertf("Select a different Blook to unlock all Blooks!")
 		}
 		else
 		{
-			alert("Run this in a lobby (https://blooket.com/play/lobby/)")
+			window.alertf("Run this in a lobby (https://blooket.com/play/lobby/)")
 		}
 	}
 	catch (hack)
@@ -182,12 +190,12 @@ function startDebugger(name)
 	let debui = document.getElementById("deb")
 	if (debui != null)
 	{
-		alert("The debugger is already open.")
+		window.alertf("The debugger is already open.")
 	}
 	else
 	{
 		let element = document.createElement('div');
-		element.innerHTML = `<div id="deb"> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Debug UI</div><div id="debname" style="font-size: 1rem;">Name: null</div><div id="hackstat">Hack Status: null</div><div id="gameinfo">No gamemode detected</div><br><button id="rundeb" style="width: 130px; height: 30px; cursor: pointer; background: hsl(0, 0%, 20%); border-radius: 22px; border: none; font-size: 1rem;"><b>Run Debugger</b></button><br><br><div style="font-size: 0.8rem;">ui by <a href="https://github.com/ZasticBradyn">zastix</a></div></div>`;
+		element.innerHTML = `<div id="deb"> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Debug UI</div><div id="debname" style="font-size: 1rem;">Name: null</div><div id="hackstat">Hack Status: null</div><div id="gameinfo">No gamemode detected</div><br><button id="rundeb" style="width: 130px; height: 30px; cursor: pointer; background: hsl(0, 0%, 20%); border-radius: 22px; border: none; font-size: 1rem;"><b>Run Debugger</b></button><br><br><div style="font-size: 0.8rem;">ui by <a href="https://github.com/Blooketware">Blooketware</a></div></div>`;
 		element.style = `width: 175px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 		document.body.appendChild(element);
 		var pos1 = 0,
@@ -455,7 +463,7 @@ function CheckGame()
 					let pass = prompt("What would you like your password to be?")
 					hack.stateNode.state.passwordOptions[0] = pass;
 					hack.stateNode.state.password = pass;
-					alert(`Set password to: ${pass}`)
+					window.alertf(`Set password to: ${pass}`)
 				})
 				break;
 			case "defense":
@@ -646,7 +654,7 @@ function CheckGame()
 					hack.stateNode.tiles[8] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 					hack.stateNode.tiles[9] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 					hack.stateNode.tiles[10] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					alert("You can now place Towers on any tile.")
+					window.alertf("You can now place Towers on any tile.")
 				})
 				break;
 			case "race":
@@ -654,7 +662,7 @@ function CheckGame()
 				finish.addEventListener('click', () =>
 				{
 					hack.stateNode.state.progress = hack.stateNode.state.goalAmount;
-					alert("Get one question correct to finish the race.")
+					window.alertf("Get one question correct to finish the race.")
 				})
 				break;
 			case "kingdom":
@@ -672,7 +680,7 @@ function CheckGame()
 				taxes.addEventListener('click', () =>
 				{
 					hack.stateNode.taxCounter = 99999;
-					alert("Disabled the Tax Toucan")
+					window.alertf("Disabled the Tax Toucan")
 				})
 				setgold.addEventListener('click', () =>
 				{
@@ -696,7 +704,7 @@ function CheckGame()
 					hack.stateNode.state.people = 100;
 					hack.stateNode.state.materials = 100;
 					hack.stateNode.state.happiness = 100;
-					alert("Maxed stats.")
+					window.alertf("Maxed stats.")
 				})
 				setInterval(() =>
 				{
@@ -708,7 +716,7 @@ function CheckGame()
 							if (cf)
 							{
 								hack.stateNode.state.guest.no.spawn = null;
-								alert("You can say No safely now.")
+								window.alertf("You can say No safely now.")
 							}
 						}
 					}
@@ -738,7 +746,7 @@ function CheckGame()
 								"materials": 10,
 								"gold": 15
 							}
-							alert("When you say yes you will gain:\nHappiness: 10\nPeople: 10\nMaterials: 10\nGold: 15")
+							window.alertf("When you say yes you will gain:\nHappiness: 10\nPeople: 10\nMaterials: 10\nGold: 15")
 						}
 					}
 				}, 500);
@@ -773,7 +781,7 @@ function CheckGame()
 					hack.stateNode.state.enemyCard.charisma = 0;
 					hack.stateNode.state.enemyCard.strength = 0;
 					hack.stateNode.state.enemyCard.wisdom = 0;
-					alert("Set enemy stats to 0")
+					window.alertf("Set enemy stats to 0")
 				})
 				break;
 			case "factory":
@@ -960,7 +968,7 @@ function kingesp()
 	function ChoiceUII()
 	{
 		let element = document.createElement('div');
-		element.innerHTML = `<div id="espp"><style>details>summary{cursor:pointer;transition:1s;list-style:circle}.button{font-size:1rem}</style><div style="padding-top:2px;font-size:1.5rem;text-align:center">Choice ESP</div><br><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">Yes:</summary><div id="c1h" class="button"></div><div id="c1p" class="button"></div><div id="c1g" class="button"></div><div id="c1m" class="button"></div></details><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">No:</summary><div id="c2h" class="button"></div><div id="c2p" class="button"></div><div id="c2g" class="button"></div><div id="c2m" class="button"></div></details><br><button id="close" style="width:130px;height:30px;cursor:pointer;background:#333;border-radius:22px;border:none;font-size:1rem"><b>Close ESP</b></button><br><div style="font-size:.8rem">ui by <a href="https://github.com/ZasticBradyn">zastix</a></div></div>`;
+		element.innerHTML = `<div id="espp"><style>details>summary{cursor:pointer;transition:1s;list-style:circle}.button{font-size:1rem}</style><div style="padding-top:2px;font-size:1.5rem;text-align:center">Choice ESP</div><br><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">Yes:</summary><div id="c1h" class="button"></div><div id="c1p" class="button"></div><div id="c1g" class="button"></div><div id="c1m" class="button"></div></details><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">No:</summary><div id="c2h" class="button"></div><div id="c2p" class="button"></div><div id="c2g" class="button"></div><div id="c2m" class="button"></div></details><br><button id="close" style="width:130px;height:30px;cursor:pointer;background:#333;border-radius:22px;border:none;font-size:1rem"><b>Close ESP</b></button><br><div style="font-size:.8rem">ui by <a href="https://github.com/Blooketware">Blooketware</a></div></div>`;
 		element.style = `width: 200px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 		document.body.appendChild(element);
 		var pos1 = 0,
@@ -1110,7 +1118,7 @@ function goldesp()
 	function ChoiceUI()
 	{
 		let element = document.createElement('div');
-		element.innerHTML = `<div id="esp"> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Choice ESP</div><div id="c1" style="font-size: 1rem;">Choice 1:</div><div id="c2">Choice 2:</div><div id="c3">Choice 3:</div><br><button id="close" style="width: 130px; height: 30px; cursor: pointer; background: hsl(0, 0%, 20%); border-radius: 22px; border: none; font-size: 1rem;"><b>Close ESP</b></button><br><br><div style="font-size: 0.8rem;">ui by <a href="https://github.com/ZasticBradyn">zastix</a></div></div>`;
+		element.innerHTML = `<div id="esp"> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Choice ESP</div><div id="c1" style="font-size: 1rem;">Choice 1:</div><div id="c2">Choice 2:</div><div id="c3">Choice 3:</div><br><button id="close" style="width: 130px; height: 30px; cursor: pointer; background: hsl(0, 0%, 20%); border-radius: 22px; border: none; font-size: 1rem;"><b>Close ESP</b></button><br><br><div style="font-size: 0.8rem;">ui by <a href="https://github.com/Blooketware">Blooketware</a></div></div>`;
 		element.style = `width: 200px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 		document.body.appendChild(element);
 		var pos1 = 0,
@@ -1185,4 +1193,4 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-alert("happy che4ting!");
+window.alertf("happy che4ting!");
