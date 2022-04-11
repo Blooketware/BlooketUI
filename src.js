@@ -15,6 +15,7 @@ function loadGUI()
 
 	window.alertf = frame.contentWindow.alert;
 	window.promptf = frame.contentWindow.prompt;
+	window.confirmf = frame.contentWindow.confirm;
 
 
 	let element = document.createElement('div');
