@@ -816,8 +816,8 @@ function CheckGame()
 				})
 				maxstats.addEventListener('click', () =>
 				{
-					let stat = document.querySelectorAll(".styles__powerBox___2sDuh-camelCase");
-					let nums = document.querySelectorAll(".styles__powerBox___1CXx3-camelCase");
+					let stat = document.querySelectorAll(".styles__innerPower___3tJ6M-camelCase");
+					let nums = document.querySelectorAll(".styles__powerBox___2sDuh-camelCase");
 					hack.stateNode.state.myCard.charisma = 20;
 					hack.stateNode.state.myCard.strength = 20;
 					hack.stateNode.state.myCard.wisdom = 20;
