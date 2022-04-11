@@ -7,7 +7,7 @@ function start()
 function loadGUI()
 { //credits to gliz
 	let element = document.createElement('div');
-	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Blooket Hacks <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Hacks by <a href="https://github.com/ZasticBradyn">zastix</a><br><a href="https://github.com/ZasticBradyn/BlooketUI/">Repository</a></div></div>`;
+	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Blooket Hacks <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Hacks by <a href="https://github.com/Blooketware">Blooketware</a><br><a href="https://github.com/Blooketware/BlooketUI/">Repository</a></div></div>`;
 	element.style = `width: 350px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 	document.body.appendChild(element);
 	var pos1 = 0,
@@ -57,7 +57,7 @@ async function debuggerHelp(how)
 	startDebugger(name);
 }
 
-function addtoken(event)
+function addtokens(event)
 {
 	try
 	{
@@ -83,7 +83,7 @@ function spoofblooks(event)
 			let hack = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
 			hack.stateNode.state.lockedBlooks = [];
 			hack.stateNode.state.takenBlooks = [];
-			alert("Select a diffrent Blook to unlock all Blooks!")
+			alert("Select a different Blook to unlock all Blooks!")
 		}
 		else
 		{
@@ -99,7 +99,7 @@ function spoofblooks(event)
 	};
 };
 
-function openboxs(event)
+function openboxes(event)
 {
 	try
 	{
@@ -133,14 +133,14 @@ function selldupes(event)
 	};
 };
 
-function allcorect(event)
+function allcorrect(event)
 {
 	try
 	{
 		let hack = Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
-		hack.stateNode.questions[0].answers = ['https://github.com/ZasticBradyn/BlooketUI', 'https://github.com/ZasticBradyn/BlooketUI-2']
-		hack.stateNode.questions[0].correctAnswers = ['https://github.com/ZasticBradyn/BlooketUI', 'https://github.com/ZasticBradyn/BlooketUI-2']
-		hack.stateNode.questions[0].text = "https://github.com/ZasticBradyn/BlooketUI"
+		hack.stateNode.questions[0].answers = ['gg', 'ez']
+		hack.stateNode.questions[0].correctAnswers = ['gg', 'ez']
+		hack.stateNode.questions[0].text = "gg"
 	}
 	catch (hack)
 	{
@@ -236,7 +236,7 @@ function startDebugger(name)
                 mode = "Factory";
                 break;
             case "/cafe":
-                mode = "Cafe is not supported"
+                mode = "Cafe is currently not supported"
                 break;
             case "/kingdom":
                 mode = "Crazy Kingdom"   
@@ -277,7 +277,7 @@ async function getstat()
 		hackstat.innerHTML = "Hack Status: Offline"
 	}
 }
-async function handelData(type)
+async function handleData(type)
 {
 	if (type = "elements")
 	{
@@ -332,7 +332,7 @@ async function handelData(type)
 	}
 	else
 	{
-		console.error("handel data incorect type")
+		console.error("handle data incorect type")
 	}
 }
 
@@ -346,11 +346,11 @@ function addListeners()
 	const sell = document.getElementById("sell")
 	const correct = document.getElementById("correct")
 	GUIX.addEventListener('click', guiexit);
-	tokens.addEventListener('click', addtoken);
+	tokens.addEventListener('click', addtokens);
 	spoof.addEventListener('click', spoofblooks);
-	open.addEventListener('click', openboxs);
+	open.addEventListener('click', openboxes);
 	sell.addEventListener('click', selldupes);
-	correct.addEventListener('click', allcorect);
+	correct.addEventListener('click', allcorrect);
 }
 
 function CheckGame()
@@ -400,13 +400,13 @@ function CheckGame()
             case "/tower/map":
                 type = "doom"
 		mode = "Tower of Doom"
-		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemey Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
+		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
 		loadgame(type, html, mode)
         break;
             case "/tower/battle":
                 type = "doom"
 		mode = "Tower of Doom"
-		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemey Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
+		html = '<div id="LoadedGame"><button id="maxstats" class="hack">Max Stats</button><button id="lowstats" class="hack">Lower Enemy Stats</button><button id="settokens" class="hack">Set Coins</button></div><br>'
 		loadgame(type, html, mode)
                 break;
             case "/defense":
@@ -919,7 +919,7 @@ function CheckGame()
 					hack.stateNode.state.glitch = ""
 					hack.stateNode.state.glitchMsg = ""
 					hack.stateNode.state.glitcherBlook = ""
-					alert("Attempted to remove glitches\n(Im to lazy to test if it works, so it it doesnt work\nopen a issue on github)")
+//					alert("Attempted to remove glitches\n(Im to lazy to test if it works, so it it doesnt work\nopen a issue on github)")
 				})
 				break;
 			case "fishing":
@@ -1176,7 +1176,7 @@ function goldesp()
 
 function addUtils()
 {
-	handelData("elements");
+	handleData("elements");
 	addListeners()
 	CheckGame();
 }
@@ -1185,4 +1185,4 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-alert("This GUI is coded by zastix");
+alert("happy che4ting!");
