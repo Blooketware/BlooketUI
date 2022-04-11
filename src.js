@@ -474,17 +474,21 @@ function CheckGame()
 				const esp2 = document.getElementById("esp")
 				set.addEventListener('click', () =>
 				{
-					let cf = window.promptf("How much Crypto would you like?")
+					var cf = window.promptf("How much Crypto would you like?")
 					let num = Number(cf)
-					hack.stateNode.state.crypto = num;
+					if (num != null || num != undefined){
+						hack.stateNode.state.crypto = num;
+					}
 				})
 				esp2.addEventListener('click', () =>
 				{
-					let pass = window.promptf("What would you like your password to be?")
-					hack.stateNode.state.passwordOptions[0] = pass;
-					hack.stateNode.state.password = pass;
-					window.alertf(`Set password to: ${pass}`)
-				})
+						var pass = window.promptf("What would you like your password to be?")
+						if (tokenz != null || tokenz != undefined){
+							hack.stateNode.state.passwordOptions[0] = pass;
+							hack.stateNode.state.password = pass; 
+							window.alertf(`Set password to: ${pass}`)
+						}
+				});
 				break;
 			case "defense":
 				const settokenss = document.getElementById("settokens")
@@ -498,7 +502,6 @@ function CheckGame()
 					if (tokenz != null || tokenz != undefined || tokenz !=  NaN){
 						hack.stateNode.state.tokens = tokenz 
 					}
-
 				})
 				sethealth.addEventListener('click', () =>
 				{
@@ -714,19 +717,31 @@ function CheckGame()
 				})
 				setgold.addEventListener('click', () =>
 				{
-					hack.stateNode.state.gold = window.promptf("How much gold would you like?")
+					var goldz = window.promptf("How much gold would you like?");
+					if (goldz != null || goldz != undefined || goldz !=  NaN){
+						hack.stateNode.state.gold = goldz 
+					}
 				})
 				sethappy.addEventListener('click', () =>
 				{
-					hack.stateNode.state.happiness = window.promptf("How much happiness would you like?")
+					var happi = window.promptf("How much happiness would you like?");
+					if (happi != null || happi != undefined || happi !=  NaN){
+						hack.stateNode.state.happiness = goldz 
+					}
 				})
 				setmaterials.addEventListener('click', () =>
 				{
-					hack.stateNode.state.materials = window.promptf("How many materials would you like?")
+					var matrs = window.promptf("How many materials would you like?");
+					if (matrs != null || matrs != undefined || matrs !=  NaN){
+						hack.stateNode.state.materials = matrs 
+					}
 				})
 				setpeople.addEventListener('click', () =>
 				{
-					hack.stateNode.state.people = window.promptf("How many people would you like?")
+					var pple = window.promptf("How many people would you like?");
+					if (pple != null || pple != undefined || pple !=  NaN){
+						hack.stateNode.state.people = pple 
+					}
 				})
 				max.addEventListener('click', () =>
 				{
@@ -788,15 +803,20 @@ function CheckGame()
 				const infhlt = document.getElementById("infhlt")
 				settokens.addEventListener('click', () =>
 				{
-					let coinhtml = document.querySelector(".styles__playerEnergy___G4cGN-camelCase")[0].stateNode
-					let coin = hack.stateNode.state.coins;
-					coin = window.promptf("How many coins would you like?")
-					coinhtml.innerText = coin;
-					window.alertf("Set coins to " + coin)
+					let coinhtml = document.querySelector(".styles__playerEnergy___G4cGN-camelCase")
+					var coin = window.promptf("How many coins would you like?");
+					if (coin != null || coin != undefined || coin !=  NaN){
+						hack.stateNode.state.coins = coin
+						coinhtml.innerText = coin;
+						coinhtml.innerHTML = coin;
+						coinhtml.outerText = coin;
+						coinhtml.outerHTML = coin;
+						window.alertf("Set coins to " + coin) 
+					}
 				})
 				maxstats.addEventListener('click', () =>
 				{
-					let stat = document.querySelectorAll(".styles__innerPower___lZjG4-camelCase");
+					let stat = document.querySelectorAll(".styles__powerBox___2sDuh-camelCasee");
 					let nums = document.querySelectorAll(".styles__powerBox___1CXx3-camelCase");
 					hack.stateNode.state.myCard.charisma = 20;
 					hack.stateNode.state.myCard.strength = 20;
@@ -978,11 +998,17 @@ function CheckGame()
 				})
 				setweight.addEventListener('click', () =>
 				{
-					hack.stateNode.state.weight = window.promptf("How much weight would you like?")
+					var wght = window.promptf("How much weight would you like?");
+					if (wght != null || wght != undefined || wght !=  NaN){
+						hack.stateNode.state.weight = wght 
+					}
 				})
 				setlure.addEventListener('click', () =>
 				{
-					hack.stateNode.state.lure = window.promptf("How much lure would you like (0-4)")
+					var lure = window.promptf("How much lure would you like? (0-4)");
+					if (lure != null || lure != undefined || lure !=  NaN){
+						hack.stateNode.state.lure = lure 
+					}
 				})
 				break;
 			case "gold":
@@ -990,7 +1016,10 @@ function CheckGame()
 				const choiceesp = document.getElementById("choiceesp")
 				setgoldg.addEventListener('click', () =>
 				{
-					hack.stateNode.state.gold = window.promptf("How much gold would you like?")
+					var gold = window.promptf("How much gold would you like?");
+					if (gold != null || gold != undefined || gold !=  NaN){
+						hack.stateNode.state.gold = gold 
+					}
 				})
 				choiceesp.addEventListener('click', () =>
 				{
@@ -1231,4 +1260,4 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-window.alertf("happy che4ting!");
+// window.alertf("happy che4ting!");
