@@ -761,7 +761,7 @@ function CheckGame()
 				const maxstats = document.getElementById("maxstats")
 				settokens.addEventListener('click', () =>
 				{
-					let coinhtml = document.querySelector(".styles__playerEnergy___2x0Fv-camelCase")
+					let coinhtml = document.querySelector(".styles__playerEnergy___G4cGN-camelCase")
 					let coin = hack.stateNode.state.coins;
 					coin = window.promptf("How many coins would you like?")
 					coinhtml.innerText = coin;
