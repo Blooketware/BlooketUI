@@ -29,6 +29,15 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 1. Copy the code of [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/blob/main/bookmarklet.js/) by pressing `CTRL+A`.
 2. Create a new Bookmark and paste the code you copied in the URL option.
 
+### Contributors
+
+- [ZasticBradyn](https://github.com/ZasticBradyn)
+- [TheRedstoneRadiant](https://github.com/TheRedstoneRadiant)
+- [Everest187](https://github.com/Everest187)
+
+
 ### Disclaimer
 
-This is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
+This is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
+I am in no way affiliated with Blooket in any way, shape or form. It is not my fault if you get in trouble for using these. Use at your own risk. This was purely made for educational purposes.
