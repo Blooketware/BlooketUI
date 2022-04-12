@@ -3,8 +3,6 @@
   <br>
 </h1>
 
-<h4 align="center">easy peasy</h4>
-
 <p align="center">
   <a href="https://github.com/Blooketware/BlooketUI/blob/main/LICENSE/">
     <img src="https://img.shields.io/badge/license-Apache 2.0-black">
