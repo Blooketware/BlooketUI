@@ -22,11 +22,11 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 ### How do i Use This?
 
-1. Copy the code of [`src.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/src.js/) by pressing `CTRL+A` and paste that into your browser console.
+1. Copy the code of [`src.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/src.js) by pressing `CTRL+A` and paste that into your browser console.
 
 ***OR***
 
-1. Copy the code of [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js/) by pressing `CTRL+A`.
+1. Copy the code of [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) by pressing `CTRL+A`.
 2. Create a new Bookmark and paste the code you copied in the URL option.
 
 ### Contributors
