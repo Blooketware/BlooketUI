@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/Blooketware/BlooketUI/blob/main/LICENSE/">
-    <img src="https://img.shields.io/badge/license-Apache 2.0-black">
+    <img src="https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-important">
   </a>
   <a>
   <a href="https://github.com/Blooketware/BlooketUI/blob/main/src.js/">
@@ -38,6 +38,6 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 ### Disclaimer
 
-This is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+This is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 I am in no way affiliated with Blooket in any way, shape or form. It is not my fault if you get in trouble for using these. Use at your own risk. This was purely made for educational purposes.
