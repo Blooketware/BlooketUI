@@ -29,11 +29,10 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 1. Copy the code of [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) by pressing `CTRL+A`.
 2. Create a new Bookmark and paste the code you copied in the URL option.
 
-### Contributors
+### Credits
 
-- [ZasticBradyn](https://github.com/ZasticBradyn)
-- [TheRedstoneRadiant](https://github.com/TheRedstoneRadiant)
-- [Everest187](https://github.com/Everest187)
+- [ZasticBradyn](https://github.com/ZasticBradyn) for the underlying UI
+- [gliz](https://twitter.com/glizuwu) for some of the hacks featured in this multitool
 
 
 ### Disclaimer
