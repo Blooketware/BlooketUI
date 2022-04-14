@@ -36,12 +36,12 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 1. Follow the steps given [here](https://github.com/ThatFruedDued/blooket-utility#How%20do%20i%20use%20it?) but paste `https://raw.githubusercontent.com/Blooketware/BlooketUI/main/blooket-utility/injectable.json` in the "Add Injectable" Box.
 2. Now go to the Perfs tab in the [Configuration Page](https://blooket-utility.okr765.com/conf) and enable BlooketUI.
-3. Now just login like normally in the [blooket-utility](https://blooket-utility.okr765.com/conf) page and there you go!
+3. Now just login like normally in the [blooket-utility](https://blooket-utility.okr765.com/) page and there you go!
 ### Credits
 
 - [ZasticBradyn](https://github.com/ZasticBradyn) for the underlying UI
 - [gliz](https://twitter.com/glizuwu) for some of the hacks featured in this multitool
-
+- [Frued Dued](https://github.com/ThatFruedDued) for the awesome [blooket-utility](https://github.com/ThatFruedDued/blooket-utility/)
 
 ### Disclaimer
 
