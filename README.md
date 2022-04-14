@@ -32,6 +32,11 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 1. Copy the code of [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) by pressing `CTRL+A`.
 2. Create a new Bookmark and paste the code you copied in the URL option.
 
+#### [blooket-utility](https://github.com/ThatFruedDued/blooket-utility) Method
+
+1. Follow the steps given [here](https://github.com/ThatFruedDued/blooket-utility#How%20do%20i%20use%20it?) but paste `https://raw.githubusercontent.com/Blooketware/BlooketUI/main/blooket-utility/injectable.json` in the "Add Injectable" Box.
+2. Now go to the Perfs tab in the [Configuration Page](https://blooket-utility.okr765.com/conf) and enable BlooketUI.
+3. Now just login like normally in the [blooket-utility](https://blooket-utility.okr765.com/conf) page and there you go!
 ### Credits
 
 - [ZasticBradyn](https://github.com/ZasticBradyn) for the underlying UI
