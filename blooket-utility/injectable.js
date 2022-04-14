@@ -1,4 +1,4 @@
-if (blooketUtility.prefs.infiniteFactory.value) {
+if (blooketUtility.prefs.blooketUI.value) {
 function start()
 {
 	loadGUI();
