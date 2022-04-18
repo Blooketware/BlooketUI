@@ -1589,4 +1589,4 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-window.alert("made by smintf, happy cheating!");
+window.alert("Developed by smint. ");
