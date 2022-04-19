@@ -536,159 +536,11 @@ function CheckGame()
 				})
 				maxtowers.addEventListener('click', () =>
 				{
-					if (hack.stateNode.towers[0] != null)
-					{
-						hack.stateNode.towers[0].damage = "9999"
-						hack.stateNode.towers[0].range = "99999"
-						hack.stateNode.towers[0].blastRadius = "999"
-						hack.stateNode.towers[0].fullCd = "0"
-					}
-					if (hack.stateNode.towers[1] != null)
-					{
-						hack.stateNode.towers[1].damage = "9999"
-						hack.stateNode.towers[1].range = "99999"
-						hack.stateNode.towers[1].blastRadius = "999"
-						hack.stateNode.towers[1].fullCd = "0"
-					}
-					if (hack.stateNode.towers[2] != null)
-					{
-						hack.stateNode.towers[2].damage = "9999"
-						hack.stateNode.towers[2].range = "99999"
-						hack.stateNode.towers[2].blastRadius = "999"
-						hack.stateNode.towers[2].fullCd = "0"
-					}
-					if (hack.stateNode.towers[3] != null)
-					{
-						hack.stateNode.towers[3].damage = "9999"
-						hack.stateNode.towers[3].range = "99999"
-						hack.stateNode.towers[3].blastRadius = "999"
-						hack.stateNode.towers[3].fullCd = "0"
-					}
-					if (hack.stateNode.towers[4] != null)
-					{
-						hack.stateNode.towers[4].damage = "9999"
-						hack.stateNode.towers[4].range = "99999"
-						hack.stateNode.towers[4].blastRadius = "999"
-						hack.stateNode.towers[4].fullCd = "0"
-					}
-					if (hack.stateNode.towers[5] != null)
-					{
-						hack.stateNode.towers[5].damage = "9999"
-						hack.stateNode.towers[5].range = "99999"
-						hack.stateNode.towers[5].blastRadius = "999"
-						hack.stateNode.towers[5].fullCd = "0"
-					}
-					if (hack.stateNode.towers[5] != null)
-					{
-						hack.stateNode.towers[5].damage = "9999"
-						hack.stateNode.towers[5].range = "99999"
-						hack.stateNode.towers[5].blastRadius = "999"
-						hack.stateNode.towers[5].fullCd = "0"
-					}
-					if (hack.stateNode.towers[6] != null)
-					{
-						hack.stateNode.towers[6].damage = "9999"
-						hack.stateNode.towers[6].range = "99999"
-						hack.stateNode.towers[6].blastRadius = "999"
-						hack.stateNode.towers[6].fullCd = "0"
-					}
-					if (hack.stateNode.towers[7] != null)
-					{
-						hack.stateNode.towers[7].damage = "9999"
-						hack.stateNode.towers[7].range = "99999"
-						hack.stateNode.towers[7].blastRadius = "999"
-						hack.stateNode.towers[7].fullCd = "0"
-					}
-					if (hack.stateNode.towers[8] != null)
-					{
-						hack.stateNode.towers[8].damage = "9999"
-						hack.stateNode.towers[8].range = "99999"
-						hack.stateNode.towers[8].blastRadius = "999"
-						hack.stateNode.towers[8].fullCd = "0"
-					}
-					if (hack.stateNode.towers[9] != null)
-					{
-						hack.stateNode.towers[9].damage = "9999"
-						hack.stateNode.towers[9].range = "99999"
-						hack.stateNode.towers[9].blastRadius = "999"
-						hack.stateNode.towers[9].fullCd = "0"
-					}
-					if (hack.stateNode.towers[10] != null)
-					{
-						hack.stateNode.towers[10].damage = "9999"
-						hack.stateNode.towers[10].range = "99999"
-						hack.stateNode.towers[10].blastRadius = "999"
-						hack.stateNode.towers[10].fullCd = "0"
-					}
-					if (hack.stateNode.towers[11] != null)
-					{
-						hack.stateNode.towers[11].damage = "9999"
-						hack.stateNode.towers[11].range = "99999"
-						hack.stateNode.towers[11].blastRadius = "999"
-						hack.stateNode.towers[11].fullCd = "0"
-					}
-					if (hack.stateNode.towers[12] != null)
-					{
-						hack.stateNode.towers[12].damage = "9999"
-						hack.stateNode.towers[12].range = "99999"
-						hack.stateNode.towers[12].blastRadius = "999"
-						hack.stateNode.towers[12].fullCd = "0"
-					}
-					if (hack.stateNode.towers[13] != null)
-					{
-						hack.stateNode.towers[13].damage = "9999"
-						hack.stateNode.towers[13].range = "99999"
-						hack.stateNode.towers[13].blastRadius = "999"
-						hack.stateNode.towers[13].fullCd = "0"
-					}
-					if (hack.stateNode.towers[14] != null)
-					{
-						hack.stateNode.towers[14].damage = "9999"
-						hack.stateNode.towers[14].range = "99999"
-						hack.stateNode.towers[14].blastRadius = "999"
-						hack.stateNode.towers[14].fullCd = "0"
-					}
-					if (hack.stateNode.towers[15] != null)
-					{
-						hack.stateNode.towers[15].damage = "9999"
-						hack.stateNode.towers[15].range = "99999"
-						hack.stateNode.towers[15].blastRadius = "999"
-						hack.stateNode.towers[15].fullCd = "0"
-					}
-					if (hack.stateNode.towers[16] != null)
-					{
-						hack.stateNode.towers[16].damage = "9999"
-						hack.stateNode.towers[16].range = "99999"
-						hack.stateNode.towers[16].blastRadius = "999"
-						hack.stateNode.towers[16].fullCd = "0"
-					}
-					if (hack.stateNode.towers[17] != null)
-					{
-						hack.stateNode.towers[17].damage = "9999"
-						hack.stateNode.towers[17].range = "99999"
-						hack.stateNode.towers[17].blastRadius = "999"
-						hack.stateNode.towers[17].fullCd = "0"
-					}
-					if (hack.stateNode.towers[18] != null)
-					{
-						hack.stateNode.towers[18].damage = "9999"
-						hack.stateNode.towers[18].range = "99999"
-						hack.stateNode.towers[18].blastRadius = "999"
-						hack.stateNode.towers[18].fullCd = "0"
-					}
-					if (hack.stateNode.towers[19] != null)
-					{
-						hack.stateNode.towers[19].damage = "9999"
-						hack.stateNode.towers[19].range = "99999"
-						hack.stateNode.towers[19].blastRadius = "999"
-						hack.stateNode.towers[19].fullCd = "0"
-					}
-					if (hack.stateNode.towers[20] != null)
-					{
-						hack.stateNode.towers[20].damage = "9999"
-						hack.stateNode.towers[20].range = "99999"
-						hack.stateNode.towers[20].blastRadius = "999"
-						hack.stateNode.towers[20].fullCd = "0"
+					for (i=0;i<e.stateNode.towers.length;i++) {
+    						e.stateNode.towers[i].damage = "9999"
+    						e.stateNode.towers[i].range = "99999"
+						e.stateNode.towers[i].blastRadius = "999"
+						e.stateNode.towers[i].fullCd = "0"
 					}
 				})
 				towersany.addEventListener('click', () =>
@@ -787,26 +639,14 @@ function CheckGame()
 						let cf = confirm("Witch detected, would you like to set the outcome of yes to gaining riches?")
 						if (cf)
 						{
-							hack.stateNode.state.guest.yes.array[0] = {
-								"msg": "Hmmmm... It looks like your future has plenty of riches.",
-								"happiness": 10,
-								"people": 10,
-								"materials": 10,
-								"gold": 15
-							}
-							hack.stateNode.state.guest.yes.array[1] = {
-								"msg": "Hmmmm... It looks like your future has plenty of riches.",
-								"happiness": 10,
-								"people": 10,
-								"materials": 10,
-								"gold": 15
-							}
-							hack.stateNode.state.guest.yes.array[2] = {
-								"msg": "Hmmmm... It looks like your future has plenty of riches.",
-								"happiness": 10,
-								"people": 10,
-								"materials": 10,
-								"gold": 15
+							for (i=0;i<hack.stateNode.state.guest.yes.array.length;i++) {
+								hack.stateNode.state.guest.yes.array[i] = {
+									"msg": "Hmmmm... It looks like your future has plenty of riches.",
+									"happiness": 10,
+									"people": 10,
+									"materials": 10,
+									"gold": 15
+								}
 							}
 							window.alert("When you say yes you will gain:\nHappiness: 10\nPeople: 10\nMaterials: 10\nGold: 15")
 						}
@@ -866,126 +706,20 @@ function CheckGame()
 				mega.addEventListener('click', () =>
 				{
 					let blook = hack.stateNode.state.blooks
-					blook[0] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[1] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[2] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[3] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[4] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[5] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[6] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[7] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[8] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
-					blook[9] = {
-						"name": "Mega Bot",
-						"color": "#d71f27",
-						"class": "🤖",
-						"rarity": "Legendary",
-						"cash": [80000, 430000, 4200000, 62000000, 1000000000],
-						"time": [5, 5, 3, 3, 3],
-						"price": [7000000, 120000000, 1900000000, 35000000000],
-						"active": false,
-						"level": 4,
-						"bonus": 5.5
-					};
+					for (i=0;i<10;i++) {
+						blook[i] = {
+							"name": "Mega Bot",
+							"color": "#d71f27",
+							"class": "🤖",
+							"rarity": "Legendary",
+							"cash": [80000, 430000, 4200000, 62000000, 1000000000],
+							"time": [5, 5, 3, 3, 3],
+							"price": [7000000, 120000000, 1900000000, 35000000000],
+							"active": false,
+							"level": 4,
+							"bonus": 5.5
+						};
+					}
 				})
 				setcash.addEventListener('click', () =>
 				{
