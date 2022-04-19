@@ -581,7 +581,7 @@ function CheckGame()
 				})
 				taxes.addEventListener('click', () =>
 				{
-					hack.stateNode.taxCounter = 99999;
+					hack.stateNode.taxCounter = 9999999;
 					window.alert("Disabled the Tax Toucan")
 				})
 				setgold.addEventListener('click', () =>
@@ -1323,4 +1323,4 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-window.alert("Developed by smint. ");
+window.alert("Developed by smint.");
