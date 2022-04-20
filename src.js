@@ -188,7 +188,6 @@ function allcorrect(event) {
             "image": "https://media.blooket.com/image/upload/c_limit,f_auto,h_250,fl_lossy,q_auto:low/v1650444812/vr9fwibbp1mm0ge8hbuz.jpg",
             "audio": null
         }]
-        var x = document.getElementsByTagName("P")[0].parentElement;
         var z = document.getElementsByTagName("iframe")
         z[z.length - 1].remove()
         x.remove()
@@ -570,17 +569,9 @@ function CheckGame()
 				})
 				towersany.addEventListener('click', () =>
 				{
-					hack.stateNode.tiles[0] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[1] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[2] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[3] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[4] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[5] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[6] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[7] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[8] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[9] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-					hack.stateNode.tiles[10] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+					for (i=0;i<10;i++) {
+						hack.stateNode.tiles[i] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+					}
 					window.alert("You can now place Towers on any tile.")
 				})
 				break;
@@ -1123,7 +1114,7 @@ function kingesp()
 	function ChoiceUII()
 	{
 		let element = document.createElement('div');
-		element.innerHTML = `<div id="espp"><style>details>summary{cursor:pointer;transition:1s;list-style:circle}.button{font-size:1rem}</style><div style="padding-top:2px;font-size:1.5rem;text-align:center">Choice ESP</div><br><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">Yes:</summary><div id="c1h" class="button"></div><div id="c1p" class="button"></div><div id="c1g" class="button"></div><div id="c1m" class="button"></div></details><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">No:</summary><div id="c2h" class="button"></div><div id="c2p" class="button"></div><div id="c2g" class="button"></div><div id="c2m" class="button"></div></details><br><button id="close" style="width:130px;height:30px;cursor:pointer;background:#333;border-radius:22px;border:none;font-size:1rem"><b>Close ESP</b></button><br><div style="font-size:.8rem">ui by <a href="https://github.com/Blooketware">Blooketware</a></div></div>`;
+		element.innerHTML = `<div id="espp"><style>details>summary{cursor:pointer;transition:1s;list-style:circle}.button{font-size:1rem}</style><div style="padding-top:2px;font-size:1.5rem;text-align:center">Choice ESP</div><br><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">Yes:</summary><div id="c1h" class="button"></div><div id="c1p" class="button"></div><div id="c1g" class="button"></div><div id="c1m" class="button"></div></details><details open><summary style="padding:10px;font-size:1.5em;font-weight:bolder">No:</summary><div id="c2h" class="button"></div><div id="c2p" class="button"></div><div id="c2g" class="button"></div><div id="c2m" class="button"></div></details><br><button id="close" style="width:130px;height:30px;cursor:pointer;background:#333;border-radius:22px;border:none;font-size:1rem"><b>Close ESP</b></button><br><div style="font-size:.8rem">ui by <a href="https://github.com/Blooketware">zastix (blooketware)</a></div></div>`;
 		element.style = `width: 200px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 		document.body.appendChild(element);
 		var pos1 = 0,
