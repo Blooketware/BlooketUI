@@ -252,7 +252,7 @@ function startDebugger(name)
 	{
 		let element = document.createElement('div');
 		element.innerHTML = `<div id="deb"> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">Debug UI</div><div id="debname" style="font-size: 1rem;">Name: null</div><div id="hackstat">Hack Status: null</div><div id="gameinfo">No gamemode detected</div><br><button id="rundeb" style="width: 130px; height: 30px; cursor: pointer; background: hsl(0, 0%, 20%); border-radius: 22px; border: none; font-size: 1rem;"><b>Run Debugger</b></button><br><br><div style="font-size: 0.8rem;">ui by <a href="https://github.com/Blooketware">Blooketware</a></div></div>`;
-		element.style = `width: 175px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
+		element.style = `width: 175px; background: rgb(64, 64, 64); border-radius: 8px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 		document.body.appendChild(element);
 		var pos1 = 0,
 			pos2 = 0,
