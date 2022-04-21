@@ -1,19 +1,19 @@
 name: Bug report
 description: Found a bug? Report it here!
-title: '[Bug]: '
+title: '[Bug] : '
 labels:
   - bug
 body:
   - type: input
     attributes:
       label: What device do you use?
-      placeholder: E.g. Chromebook
+      placeholder: e.g. Chromebook, PC, Tablet
     validations:
       required: true
   - type: input
     attributes:
       label: What browser do you use?
-      placeholder: E.g. Chrome
+      placeholder: e.g. Chrome, Edge, Firefox, Opera
     validations:
       required: true
   - type: textarea
