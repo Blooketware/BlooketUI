@@ -42,6 +42,7 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 - [zastix](https://github.com/notzastix) for the underlying UI and some of the hacks
 - [gliz](https://twitter.com/glizuwu) for some of the hacks featured in this multitool
 - [Frued Dued](https://github.com/ThatFruedDued) for the awesome [blooket-utility](https://github.com/ThatFruedDued/blooket-utility/)
+- [Echo](https://github.com/3kh0) for some small changes and improvements
 
 ### Disclaimer
 
