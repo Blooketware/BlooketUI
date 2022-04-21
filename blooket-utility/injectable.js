@@ -1,5 +1,6 @@
-if (blooketUtility.prefs.blooketUI.value) {
-	function start()
+if (blooketUtility.prefs.infiniteFactory.value) {
+
+function start()
 {
 	loadGUI();
 	addUtils();
@@ -20,8 +21,8 @@ function loadGUI()
 
 
 	let element = document.createElement('div');
-	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style=" padding-top: 2px; font-size: 1.5rem; text-align: center;">BlooketUI <button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Updated by <a href="https://github.com/Blooketware">Blooketware</a><br><a href="https://github.com/Blooketware/BlooketUI/">Repository</a></div></div>`;
-	element.style = `width: 350px; background: rgb(31, 25, 30); border-radius: 13px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
+	element.innerHTML = `<div id="GUI"> <style>details > summary{cursor: pointer; transition: 1s; list-style: circle;}.hack{border: none; background: hsl(0, 0%, 20%); padding: 7px; margin: 5px; width: 70%; color: white; transition: 0.1s; border-radius: 5px; cursor: pointer;}.hack:hover{background: hsl(0, 1%, 31%);}</style> <div style="cursor: all-scroll; padding-top: 2px; font-size: 1.5rem; text-align: center;">BlooketUI<button id="gui-" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: 90%; font-size: 2.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: -10px; padding-right: -15px; color: white;">-</button> <button id="guiX" style="background: black; height: 45px; width: 45px; border: none; cursor: pointer; position: absolute; top: -10px; right: -10px; font-size: 1.5rem; border-radius: 10px; font-family: Nunito; font-weight: bolder; padding-top: 10px; padding-right: 15px; color: white;">X</button> </div><div style="display: block; margin: 10px; min-height: 70px;"> <div id="curPage">no game detected</div><div id="name">name: null</div><div>(press e to hide)</div><details open=""> <summary style="padding: 10px; font-size: 1.5em; font-weight: bolder">Main</summary> <button id="token" class="hack">Get Daily Rewards</button> <button id="spoof" class="hack">Spoof Blooks</button> <button id="open" class="hack">Spam Open Boxes</button> <button id="sell" class="hack">Auto Sell Dupes</button> <button id="correct" class="hack">Every Answer Correct</button> </details><br><div id="LoadedGame"> </div><div> Open source on <a href="https://github.com/Blooketware/BlooketUI">GitHub</a></div></div>`;
+	element.style = `width: 350px; background: rgb(64, 64, 64); border-radius: 8px; position: absolute; text-align: center; font-family: Nunito; color: white; overflow: hidden; top: 5%; left: 40%;`;
 	document.body.appendChild(element);
 	var pos1 = 0,
 		pos2 = 0,
@@ -1341,4 +1342,5 @@ setInterval(() =>
 	CheckGame();
 }, 10000);
 window.alert("Developed by smint n zastix.");
+
 }
