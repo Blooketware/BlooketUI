@@ -24,8 +24,8 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 #### Browser Console Method
 
-1. Copy the code of [`src.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/src.js) by pressing `CTRL+A`
-2. Now paste that into your browser console.
+1. Copy the code of [`src.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/src.js) by pressing `CTRL + A`
+2. Now paste that into your browser console (CTRL + SHIFT + I)
 
 #### Bookmarklet Method
 
