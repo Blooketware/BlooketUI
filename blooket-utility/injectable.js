@@ -1340,5 +1340,5 @@ setInterval(() =>
 {
 	CheckGame();
 }, 10000);
-window.alert("Developed by smint n zastix.");
+//window.alert("Developed by smint n zastix.");
 }
