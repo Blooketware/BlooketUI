@@ -29,7 +29,7 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 #### Bookmarklet Method
 
-1. Copy the code from [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) by pressing `CTRL + A`.
+1. Copy the code from [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) by pressing `CTRL + A`
 2. Create a new Bookmark and paste the code you copied in the URL option. (Bookmarks > Bookmark this tab > More... > [`bookmarklet.js`](https://raw.githubusercontent.com/Blooketware/BlooketUI/main/bookmarklet.js) > Done)
 
 #### [blooket-utility](https://github.com/ThatFruedDued/blooket-utility) Method
