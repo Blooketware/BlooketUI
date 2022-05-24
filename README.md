@@ -18,7 +18,7 @@
 
 ### What's BlooketUI?
 
-A script that implements a GUI to make cheating on Blooket easier than ever.
+A script that uses a graphical user interface to make Blooket cheating easier than ever.
 
 ### How do I Use This?
 
@@ -48,4 +48,4 @@ A script that implements a GUI to make cheating on Blooket easier than ever.
 
 This is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-I am in no way affiliated with Blooket in any way, shape or form. It is not my fault if you get in trouble for using these. Use at your own risk. This was purely made for educational purposes.
+I am in no way affiliated with Blooket in any way, shape or form. It is not my fault if you get in trouble for using these. Use at your own risk. This was created solely for educational purposes.
