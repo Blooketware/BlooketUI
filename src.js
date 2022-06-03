@@ -828,7 +828,7 @@ function CheckGame() {
                 infifood.addEventListener('click', () => {
                     if (document.location.pathname != "/cafe") return alert("This cheat doesn't work in the shop!");
                     hack.stateNode.state.foods.forEach(e => e.stock = 99999);
-                    hack..stateNode.forceUpdate();
+                    hack.stateNode.forceUpdate();
                     var z = document.getElementsByTagName("iframe")
                     z[z.length - 1].remove()
                     x.remove()
