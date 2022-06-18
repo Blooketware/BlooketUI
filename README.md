@@ -40,7 +40,7 @@ A script that uses a graphical user interface to make Blooket cheating easier th
 ### Credits
 
 - [zastix](https://github.com/notzastix) for the underlying UI and some of the hacks
-- [gliz](https://twitter.com/glizuwu) for some of the hacks featured in this multitool
+- [rxzyx](https://github.com/rxzyx) for the blook rush and deceptive dino hacks
 - [Frued Dued](https://github.com/ThatFruedDued) for the awesome [blooket-utility](https://github.com/ThatFruedDued/blooket-utility/)
 - [Echo](https://github.com/3kh0) for some small changes and improvements
 
