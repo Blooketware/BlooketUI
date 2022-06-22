@@ -49,6 +49,3 @@ A script that uses a graphical user interface to make Blooket cheating easier th
 This is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 I am in no way affiliated with Blooket in any way, shape or form. It is not my fault if you get in trouble for using these. Use at your own risk. This was created solely for educational purposes.
-
-W
-#### test from git
