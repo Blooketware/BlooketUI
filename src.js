@@ -32,7 +32,7 @@ var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-GUI.onmousedown = ((e = window.event) => {
+maingui.onmousedown = ((e = window.event) => {
     e.preventDefault();
     pos3 = e.clientX;
     pos4 = e.clientY;
@@ -47,8 +47,8 @@ GUI.onmousedown = ((e = window.event) => {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        GUI.style.top = (GUI.offsetTop - pos2) + "px";
-        GUI.style.left = (GUI.offsetLeft - pos1) + "px";
+        maingui.style.top = (maingui.offsetTop - pos2) + "px";
+        maingui.style.left = (maingui.offsetLeft - pos1) + "px";
     });
 });
 
