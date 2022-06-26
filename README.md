@@ -5,5 +5,5 @@ A redesigned version of the BlooketUI that is faster and more optimized
 well its not done yet so <b>you dont</b>
 
 # Credits
-[gliz] - The underlying UI, mod loader, reacthandler.
-[zastix] - Recoding all the hacks and keeping it updated
+[gliz](https://twitter.com/glizuwu) - The underlying UI, mod loader, reacthandler.
+[zastix](https://github.com/notzastix) - Recoding all the hacks and keeping it updated
