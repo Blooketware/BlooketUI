@@ -257,7 +257,7 @@ cheats = {
 }
 
 Object.keys(cheats.global).forEach(cheatName => {
-    btn = utils.createButton(cheats.global[cheatName]);
+    btn = utils.createButton(cheatName);
     btn.onclick = () => {
         cheats.global[cheatName]();
     }
