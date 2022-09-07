@@ -2,7 +2,7 @@
 
 let onlyloop;
 
-// Iframe bypass
+// iframe bypass
 frame = document.createElement('iframe')
 frame.style.width = '0px'
 frame.style.height = '0px'
