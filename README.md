@@ -1,9 +1,6 @@
 # BlooketUI V2
 A redesigned version of the BlooketUI that is faster and more optimized
 
-# discountinued
-im no longer working on this - zasitx
-
 # How do I use it?
 well its not done yet so <b>you dont</b>
 
