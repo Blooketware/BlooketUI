@@ -128,7 +128,6 @@ minusBtn.style.fontSize = "2.5rem";
 minusBtn.style.borderRadius = "10px";
 minusBtn.style.fontFamily = "Nunito";
 minusBtn.style.fontWeight = "bolder";
-minusBtn.style.paddingTop = "10px";
 minusBtn.style.paddingRight = "-15px";
 minusBtn.style.color = "white";
 minusBtn.innerText = "-";
@@ -161,6 +160,7 @@ maingui.appendChild(footer);
 
 // utits credits to gliz for 99% of these functions
 utils = {
+    usercache: {},
     getValues: () => new Promise((e, t) => {
         try {
             let n = window.webpackJsonp.map(e => Object.keys(e[1]).map(t => e[1][t])).reduce((e, t) => [...e, ...t], []).find(e => /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/.test(e.toString()) && /\(new TextEncoder\)\.encode\(\"(.+?)\"\)/.test(e.toString())).toString();
@@ -188,17 +188,27 @@ utils = {
         }, !1, ["encrypt"]), (new TextEncoder).encode(JSON.stringify(e))))).map(e => String.fromCharCode(e)).join(""))
     },
     sleep: (time) => new Promise(resolve => setTimeout(resolve, time)),
-    getUserData: () => new Promise(async(resolve, reject) => {
+    getSessData: () => new Promise(async (resolve, reject) => {
         try {
             response = await fetch('https://api.blooket.com/api/users/verify-session', {
                 method: "GET",
-                headers: {
-                    "accept": "application/json, text/plain, */*",
-                    "accept-language": "en-US,en;q=0.9,ru;q=0.8",
-                },
                 credentials: "include"
             });
-            resolve(response.json());
+            a = await response.json();
+            resolve(a);
+        } catch {
+            reject("Could not fetch user data");
+        }
+    }),
+    getUserData: () => new Promise(async (resolve, reject) => {
+        try {
+            response = await fetch('https://api.blooket.com/api/users', {
+                method: "GET",
+                credentials: "include"
+            });
+            a = await response.json();
+            utils.usercache = a;
+            resolve(a);
         } catch {
             reject("Could not fetch user data");
         }
@@ -208,6 +218,11 @@ utils = {
         button.classList.add('cheat');
         button.innerText = cheat;
         return button;
+    },
+    toggleUI: (e) => {
+        if (e) if (e.code == 'KeyE') $("#GUI").toggle();
+        else $("#GUI").toggle();
+        
     }
 }
 
@@ -251,7 +266,57 @@ cheats = {
     },
     global: {
         "Spam Open Boxes": async () => {
-
+            // this is recoded btw
+            box = prompt("What box do you want to open? (e.g. Space)");
+            boxes = {
+                dino: 25,
+                aquatic: 20,
+                safari: 20,
+                bot: 20,
+                space: 20,
+                breakfast: 15,
+                medieval: 15,
+                wonderland: 15,
+            }
+            if (!Object.keys(boxes).includes(box.toLowerCase())) {
+                alert("Thats not a real box...");
+                return;
+            }
+            if (utils.usercache.tokens < boxes[box.toLowerCase()]) {
+                alert("You dont have enought coins for that box...");
+                return;
+            }
+            
+        },
+        "Claim Daily Rewards": async () => {
+            try {
+                Array(2).fill(async () => {
+                    await utils.sleep(750);
+                    utils.getSessData().then(async x => {
+                        utils.getValues().then(async e => {
+                            fetch("https://api.blooket.com/api/users/add-rewards", {
+                                method: "put",
+                                credentials: "include",
+                                headers: {
+                                    "content-type": "application/json",
+                                    "X-Blooket-Build": e.blooketBuild
+                                },
+                                body: await utils.encodeValues({
+                                    name: x.name,
+                                    addedTokens: 250,
+                                    addedXp: 300
+                                }, e.secret)
+                            });
+                        });
+                    });
+                }).forEach(fnc => {
+                    fnc();
+                });
+                alert("Added 500 coins!");
+            } catch (e) {
+                console.log(new Error(e));
+                alert("An error has occured, please report this on github (" + e + ")");
+            }
         }
     }
 }
@@ -266,3 +331,6 @@ Object.keys(cheats.global).forEach(cheatName => {
 
 document.body.append(maingui);
 alert('BlooketUIV2 developed by zastix');
+(utils.getUserData()); // load ze cache
+
+window.addEventListener('keypress', utils.toggleUI);
