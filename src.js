@@ -18,6 +18,7 @@ var getValues = () => new Promise((e, t) => {
         t("Could not fetch auth details")
     }
 });
+
 var encodeValues = async (e, t) => {
     let d = window.crypto.getRandomValues(new Uint8Array(12));
     return window.btoa(Array.from(d).map(e => String.fromCharCode(e)).join("") + Array.from(new Uint8Array(await window.crypto.subtle.encrypt({
@@ -27,7 +28,6 @@ var encodeValues = async (e, t) => {
         name: "AES-GCM"
     }, !1, ["encrypt"]), (new TextEncoder).encode(JSON.stringify(e))))).map(e => String.fromCharCode(e)).join(""))
 };
-
 
 function loadGUI() {
     var frame = document.createElement("iframe");
@@ -72,6 +72,7 @@ function loadGUI() {
         });
     });
 }
+
 start();
 async function debuggerHelp(how) {
     const response = await fetch('https://api.blooket.com/api/users/verify-session', {
@@ -105,12 +106,12 @@ function addtokens(event) {
                     },
                     body: await encodeValues({
                         name: x.name,
-                        addedTokens: 500,
-                        addedXp: 300
+                        addedTokens: 350,
+                        addedXp: 250
                     }, e.secret)
-                }).then(() => alert('Added daily rewawrds!')).catch(() => alert('There was an error when adding rewards!'));
-            }).catch(() => alert('There was an error encoding requests!'));
-        }).catch(() => alert('There was an error getting username!'));
+                }).then(() => alert('Added daily Tokens & XP!')).catch(() => alert('There was an error processing your request...'));
+            }).catch(() => alert('There was an error encoding requests...'));
+        }).catch(() => alert('There was an error fetching user id...'));
         window.console.clear()
     } catch (hack) {
         if (confirm('An error has occured, would you like to open the debugger?')) {
