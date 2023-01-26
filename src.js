@@ -74,7 +74,7 @@ function loadGUI() {
 }
 start();
 async function debuggerHelp(how) {
-    const response = await fetch('https://api.blooket.com/api/users/verify-session', {
+    const response = await fetch('https://play.blooket.com/api/users/verify-session', {
         method: "GET",
         headers: {
             "accept": "application/json, text/plain, */*",
@@ -92,11 +92,11 @@ async function debuggerHelp(how) {
 
 function addtokens(event) {
     try {
-        fetch("https://api.blooket.com/api/users", {
+        fetch("https://play.blooket.com/api/users/me", {
             credentials: "include"
         }).then(x => x.json()).then(x => {
             getValues().then(async e => {
-                fetch("https://api.blooket.com/api/users/add-rewards", {
+                fetch("https://play.blooket.com/api/users/add-rewards", {
                     method: "put",
                     credentials: "include",
                     headers: {
